@@ -1,0 +1,39 @@
+.about {
+  display: none;
+  padding-top: var(--typical-padding);
+  padding-bottom: var(--typical-padding);
+  @include desktop {
+    display: flex;
+  }
+}
+.about__title {
+  @include font(700, 36px, 1.17, 0.03em);
+  text-align: center;
+  color: var(--primary-text-color);
+}
+.about__list {
+  display: flex;
+  margin-top: 50px;
+}
+.about__item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.thumb {
+  position: relative;
+  > .thumb__label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 27px;
+    margin: 0;
+    @include font(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-background-color);
+    background: rgba(47, 48, 58, 0.8);
+  }
+}

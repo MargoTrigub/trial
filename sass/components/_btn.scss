@@ -1,0 +1,9 @@
+.btn {
+  text-align: center;
+  border-radius: var(--primary-border-radius);
+  border: none;
+  @include font(700, 16px, 1.88, 0.06em);
+  background: var(--action-color);
+  box-shadow: var(--primary-box-shadow), var(--primary-box-shadow), var(--primary-box-shadow);
+  color: var(--primary-background-color);
+}
