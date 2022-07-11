@@ -11,8 +11,8 @@
 .modal {
   padding: 40px;
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 250px;
+  min-height: 509px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -23,6 +23,14 @@
   border-radius: var(--primary-border-radius);
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
+  }
+  @include mobile {
+    min-width: 450px;
+    min-height: 609px;
+  }
+  @include desktop {
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 .modal__btn-close {
@@ -53,19 +61,38 @@
 }
 .modal__title {
   margin-bottom: 12px;
-  @include font(700, 20px, 1.15, 0.03em);
+  @include font(700, 15px, 1.15, 0.03em);
   text-align: center;
   color: var(--primary-text-color);
+  @include mobile {
+    @include font(700, 20px, 1.15, 0.03em);
+  }
 }
 .modal-field {
   margin-bottom: 10px;
 }
+.modal-field__label-link {
+  @include transition(color);
+  &:focus,
+  &:hover {
+    color: var(--action-color);
+  }
+  @include tablet {
+    &:focus,
+    &:hover {
+      color: var(--primary-text-color);
+    }
+  }
+}
+
 .modal-field__label {
   display: block;
   margin-bottom: 4px;
   @include font(null, 12px, 1.17, 0.01em);
   color: var(-secondary-text-color);
+  @include transition(color);
 }
+
 .modal-input__wrap {
   position: relative;
 }
@@ -121,11 +148,18 @@
   align-items: center;
   justify-content: center;
 }
+
 .modal-privacy__label {
   display: flex;
   align-items: center;
-  @include font(null, 14px, 1.71, 0.03em);
+  @include font(null, 5px, 1.17, 0.03em);
   color: var(--secondary-text-color);
+  @include mobile {
+    @include font(null, 12px, 1.17, 0.03em);
+  }
+  @include desktop {
+    @include font(null, 14px, 1.71, 0.03em);
+  }
 }
 .modal-privacy__label span {
   content: '';
@@ -151,9 +185,15 @@
 }
 
 .modal-privacy__link {
-  @include font(null, 14px, 1.71, 0.03em);
+  @include font(null, 8px, 1.17, 0.03em);
   text-decoration-line: underline;
   color: var(--action-color);
+  @include mobile {
+    @include font(null, 12px, 1.17, 0.03em);
+  }
+  @include desktop {
+    @include font(null, 14px, 1.71, 0.03em);
+  }
 }
 .modal__btn-submit {
   display: flex;
