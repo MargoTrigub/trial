@@ -1209,7 +1209,7 @@ ul {
   padding: 40px;
   position: absolute;
   min-width: 250px;
-  min-height: 509px;
+  min-height: 609px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -1223,8 +1223,8 @@ ul {
 }
 @media screen and (min-width: 480px) {
   .modal {
-    min-width: 450px;
-    min-height: 609px;
+    max-width: 450px;
+    max-height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
