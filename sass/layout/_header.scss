@@ -80,7 +80,7 @@
 }
 .mob-menu {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--primary-background-color);
   top: 0;
   left: 0;
@@ -126,7 +126,7 @@
 }
 .mob-menu__link {
   display: block;
-  @include font(500, 40px, 1.18, 0.02em);
+  @include font(500, 30px, 1.18, 0.02em);
   text-align: left;
   color: var(--primary-text-color);
   @include transition(color);
@@ -134,6 +134,9 @@
   &:focus,
   &:active {
     color: var(--action-color);
+  }
+  @include mobile {
+    @include font(500, 40px, 1.18, 0.02em);
   }
 }
 .mob-menu__wrap-bottom {
@@ -149,15 +152,21 @@
 .mob-contacts__link {
   display: block;
   margin-bottom: 32px;
-  @include font(500, 24px, 1.17, 0.02em);
+  @include font(500, 20px, 1.17, 0.02em);
   color: var(--secondary-text-color);
   &:first-child {
     margin-bottom: 0;
   }
+  @include mobile {
+    @include font(500, 24px, 1.17, 0.02em);
+  }
 }
 .tel {
-  @include font(500, 34px, 1.18, 0.02em);
+  @include font(500, 28px, 1.18, 0.02em);
   color: var(--action-color);
+  @include mobile {
+    @include font(500, 34px, 1.18, 0.02em);
+  }
 }
 .mob-soc__list {
   display: flex;
@@ -180,8 +189,11 @@
 }
 
 .mob-soc__link {
-  @include font(500, 18px, 1.22, 0.02em);
+  @include font(500, 14px, 1.22, 0.02em);
   color: var(--action-color);
+  @include mobile {
+    @include font(500, 18px, 1.22, 0.02em);
+  }
 }
 /*--------------------------------------------------Mobile menu finish---------------------------*/
 .menu {

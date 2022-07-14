@@ -86,7 +86,7 @@
   }
   @include desktop {
     width: calc((100% - 60px) / 3);
-    height: 404px;
+    height: 100%;
   }
 }
 
@@ -125,7 +125,7 @@
     padding: 49px 24px 77px 24px;
   }
   @include desktop {
-    padding: 63px 24px;
+    padding: 63px 24px 63px 24px;
   }
 }
 .card-signature {
