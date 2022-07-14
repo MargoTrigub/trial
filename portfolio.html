@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <nav class="nav">
           <a href="./index.html" class="logo nav__logo link">
@@ -26,30 +26,69 @@
           >
           <ul class="menu list">
             <li class="menu__item">
-              <a href="./index.html" class="menu__link current link">Студия</a>
+              <a href="./index.html" class="menu__link link">Студия</a>
             </li>
             <li class="menu__item">
-              <a href="./portfolio.html" class="menu__link link">Портфолио</a>
+              <a href="./portfolio.html" class="menu__link current link">Портфолио</a>
             </li>
             <li class="menu__item"><a href="" class="menu__link link">Контакты</a></li>
           </ul>
         </nav>
         <div class="contacts">
           <a href="mailto:info@devstudio.com" class="contacts__link link">
-            <svg class="contacts__icon" width="16" height="12">
+            <svg class="contacts__icon icon-mail" width="14" height="10">
               <use href="./images/icons.svg#icon-mail"></use>
             </svg>
             info@devstudio.com</a
           >
           <a href="tel:+380961111111" class="contacts__link link">
-            <svg class="contacts__icon" width="10" height="16">
+            <svg class="contacts__icon icon-tel" width="10" height="14">
               <use href="./images/icons.svg#icon-tel"></use>
             </svg>
             +38 096 111 11 11</a
           >
         </div>
+        <button type="button" class="menu-open-btn">
+          <svg class="menu-open-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
       </div>
-    </header>-->
+      <div class="mob-menu is-hidden">
+        <div class="container-mob">
+          <button class="mob-menu_btn-close">
+            <svg class="mob-menu__icon-close" width="40" height="40">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="mob-menu__wrap-top">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link link">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link current link">Портфолио</a>
+              </li>
+              <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="mob-menu__wrap-bottom">
+            <div class="mob-contacts">
+              <a href="mailto:info@devstudio.com" class="mob-contacts__link link">
+                info@devstudio.com</a
+              >
+              <a href="tel:+380961111111" class="mob-contacts__link tel link"> +38 096 111 11 11</a>
+            </div>
+            <ul class="mob-soc__list list">
+              <li class="mob-soc__item"><a href="" class="mob-soc__link link">Instagram</a></li>
+              <li class="mob-soc__item"><a href="" class="mob-soc__link link">Twitter</a></li>
+              <li class="mob-soc__item"><a href="" class="mob-soc__link link">Facebook</a></li>
+              <li class="mob-soc__item"><a href="" class="mob-soc__link link">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="portfolio">
       <section class="portfolio__section">
         <div class="container">
@@ -79,19 +118,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="./images/desktop/x1/p-dt.png 1x, ./images/desktop/x2/p-dt-x2.jpg 2x"
+                        srcset="./images/p-dt.png 1x, ./images/p-dt-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="./images/tablet/x1/p-tab.jpg 1x, ./images/tablet/x2/p-tab-x2.jpg 2x"
+                        srcset="./images/p-tab.jpg 1x, ./images/p-tab-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="./images/mobile/x1/p-mob.jpg 1x, ./images/mobile/x2/p-mobx2.jpg 2x"
+                        srcset="./images/p-mob.jpg 1x, ./images/p-mobx2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img src="./images/mobile/x1/p-mob.jpg" alt="Технокряк" width="370" />
+                    <img src="./images/p-mob.jpg" alt="Технокряк" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -109,29 +148,20 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt1.jpg    1x,
-                          ./images/desktop/x2/p-dt1-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt1.jpg 1x, ./images/p-dt1-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab1.jpg    1x,
-                          ./images/tablet/x2/p-tab1-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab1.jpg 1x, ./images/p-tab1-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob1.jpg   1x,
-                          ./images/mobile/x2/p-mob1x2.jpg 2x
-                        "
+                        srcset="./images/p-mob1.jpg 1x, ./images/p-mob1x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
                     <img
-                      src="./images/mobile/x1/p-mob1.jpg "
+                      src="./images/p-mob1.jpg "
                       alt="Постер New Orlean vs Golden Star"
                       width="370"
                     />
@@ -152,28 +182,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt2.jpg    1x,
-                          ./images/desktop/x2/p-dt2-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt2.jpg 1x, ./images/p-dt2-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab2.jpg    1x,
-                          ./images/tablet/x2/p-tab2-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab2.jpg 1x, ./images/p-tab2-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob2.jpg   1x,
-                          ./images/mobile/x2/p-mob2x2.jpg 2x
-                        "
+                        srcset="./images/p-mob2.jpg 1x, ./images/p-mob2x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img src="./images/mobile/x1/p-mob2.jpg" alt="Ресторан Seafood" width="370" />
+                    <img src="./images/p-mob2.jpg" alt="Ресторан Seafood" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -191,28 +212,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt3.jpg    1x,
-                          ./images/desktop/x2/p-dt3-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt3.jpg 1x, ./images/p-dt3-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab3.jpg    1x,
-                          ./images/tablet/x2/p-tab3-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab3.jpg 1x, ./images/p-tab3-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob3.jpg   1x,
-                          ./images/mobile/x2/p-mob3x2.jpg 2x
-                        "
+                        srcset="./images/p-mob3.jpg 1x, ./images/p-mob3x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img src="./images/mobile/x1/p-mob3.jpg " alt="Проект Prime" width="370" />
+                    <img src="./images/p-mob3.jpg " alt="Проект Prime" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -230,28 +242,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt4.jpg    1x,
-                          ./images/desktop/x2/p-dt4-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt4.jpg 1x, ./images/p-dt4-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab4.jpg    1x,
-                          ./images/tablet/x2/p-tab4-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab4.jpg 1x, ./images/p-tab4-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob4.jpg   1x,
-                          ./images/mobile/x2/p-mob4x2.jpg 2x
-                        "
+                        srcset="./images/p-mob4.jpg 1x, ./images/p-mob4x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img src="./images/mobile/x1/p-mob4.jpg" alt="Проект Boxes" width="370" />
+                    <img src="./images/p-mob4.jpg" alt="Проект Boxes" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -269,32 +272,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt5.jpg    1x,
-                          ./images/desktop/x2/p-dt5-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt5.jpg 1x, ./images/p-dt5-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab5.jpg    1x,
-                          ./images/tablet/x2/p-tab5-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab5.jpg 1x, ./images/p-tab5-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob5.jpg   1x,
-                          ./images/mobile/x2/p-mob5x2.jpg 2x
-                        "
+                        srcset="./images/p-mob5.jpg 1x, ./images/p-mob5x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img
-                      src="./images/mobile/x1/p-mob5.jpg "
-                      alt="Inspiration has no Borders"
-                      width="370"
-                    />
+                    <img src="./images/p-mob5.jpg " alt="Inspiration has no Borders" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -312,32 +302,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt6.jpg    1x,
-                          ./images/desktop/x2/p-dt6-x2.jpg 2x
-                        "
+                        srcset="./imagesp-dt6.jpg 1x, ./imagesp-dt6-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab6.jpg    1x,
-                          ./images/tablet/x2/p-tab6-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab6.jpg 1x, ./images/p-tab6-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob6.jpg   1x,
-                          ./images/mobile/x2/p-mob6x2.jpg 2x
-                        "
+                        srcset="./images/p-mob6.jpg 1x, ./images/p-mob6x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img
-                      src="./images/mobile/x1/p-mob6.jpg"
-                      alt="Издание Limited Edition"
-                      width="370"
-                    />
+                    <img src="./images/p-mob6.jpg" alt="Издание Limited Edition" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -355,28 +332,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt7.jpg    1x,
-                          ./images/desktop/x2/p-dt7-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt7.jpg 1x, ./images/p-dt7-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab7.jpg    1x,
-                          ./images/tablet/x2/p-tab7-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab7.jpg 1x, ./images/p-tab7-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob7.jpg   1x,
-                          ./images/mobile/x2/p-mob7x2.jpg 2x
-                        "
+                        srcset="./images/p-mob7.jpg 1x, ./images/p-mob7x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img src="./images/mobile/x1/p-mob7.jpg" alt="Проект LAB" width="370" />
+                    <img src="./images/p-mob7.jpg" alt="Проект LAB" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -394,28 +362,19 @@
                   <div class="card__wrap">
                     <picture>
                       <source
-                        srcset="
-                          ./images/desktop/x1/p-dt8.jpg    1x,
-                          ./images/desktop/x2/p-dt8-x2.jpg 2x
-                        "
+                        srcset="./images/p-dt8.jpg 1x, ./images/p-dt8-x2.jpg 2x"
                         media="(min-width: 1200px)"
                       />
                       <source
-                        srcset="
-                          ./images/tablet/x1/p-tab8.jpg    1x,
-                          ./images/tablet/x2/p-tab8-x2.jpg 2x
-                        "
+                        srcset="./images/p-tab8.jpg 1x, ./images/p-tab8-x2.jpg 2x"
                         media="(min-width: 768px)"
                       />
                       <source
-                        srcset="
-                          ./images/mobile/x1/p-mob8.jpg   1x,
-                          ./images/mobile/x2/p-mob8x2.jpg 2x
-                        "
+                        srcset="./images/p-mob8.jpg 1x, ./images/p-mob8x2.jpg 2x"
                         media="(min-width: 320px)"
                       />
                     </picture>
-                    <img src="./images/mobile/x1/p-mob8.jpg" alt="Growing Business" width="370" />
+                    <img src="./images/p-mob8.jpg" alt="Growing Business" width="370" />
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -433,7 +392,7 @@
         </div>
       </section>
     </main>
-    <!--<footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer-contacts">
           <a href="./index.html" class="footer-logo link"
@@ -445,12 +404,16 @@
                 <a href="" class="footer-address__link link">г. Киев, пр-т Леси Украинки, 26</a>
               </li>
               <li class="footer-address__item">
-                <a href="mailto:info@example.com" class="footer-address__link link"
+                <a
+                  href="mailto:info@example.com"
+                  class="footer-address__link footer-contacts__link link"
                   >info@example.com</a
                 >
               </li>
               <li class="footer-address__item">
-                <a href="tel:+380991111111" class="footer-address__link link">+38 099 111 11 11</a>
+                <a href="tel:+380991111111" class="footer-address__link footer-contacts__link link"
+                  >+38 099 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -510,7 +473,7 @@
           </form>
         </div>
       </div>
-    </footer>-->
+    </footer>
     <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -80,17 +80,14 @@
 }
 .mob-menu {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   background-color: var(--primary-background-color);
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
+  padding: 48px 25px;
   .container {
-    padding: 0;
     display: flex;
     flex-direction: column;
     width: 100%;

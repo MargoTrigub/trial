@@ -1,6 +1,5 @@
 .about {
   display: none;
-  padding-top: var(--typical-padding);
   padding-bottom: var(--typical-padding);
   @include desktop {
     display: flex;

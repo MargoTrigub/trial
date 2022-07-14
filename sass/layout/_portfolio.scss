@@ -2,8 +2,12 @@
   background: var(--primary-background-color);
 }
 .portfolio__section {
-  padding-top: var(--typical-padding);
-  padding-bottom: var(--typical-padding);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: var(--typical-padding);
+    padding-bottom: var(--typical-padding);
+  }
 }
 .filter {
   display: flex;
@@ -25,14 +29,26 @@
   flex-wrap: wrap;
   gap: 8px;
   row-gap: 15px;
+  @include tablet {
+    flex-wrap: nowrap;
+
+    row-gap: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .current {
     color: var(--primary-background-color);
     background-color: var(--action-color);
     box-shadow: var(--secondary-box-shadow);
   }
 }
+
 .filter__item {
-  flex-basis: calc((100% - 46px) / 3);
+  @include tablet {
+    flex-basis: content;
+  }
 }
 .filter__btn {
   padding: 6px 22px;
@@ -46,18 +62,12 @@
   @include transition(color);
   @include transition(background-color);
   @include transition(box-shadow);
+
   &:hover,
   &:focus {
     color: var(--primary-background-color);
     background-color: var(--action-color);
     box-shadow: var(--secondary-box-shadow);
-  }
-}
-
-.projects {
-  padding-bottom: 60px;
-  @include desktop {
-    padding-bottom: var(--typical-padding);
   }
 }
 
@@ -75,7 +85,7 @@
     width: calc((100% - 30px) / 2);
   }
   @include desktop {
-    width: calc((100% - 90px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 
