@@ -86,6 +86,7 @@
   }
   @include desktop {
     width: calc((100% - 60px) / 3);
+    height: 404px;
   }
 }
 
